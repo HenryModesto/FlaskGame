@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../static/images/img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.cartas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    width: 450px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    cursor: pointer;
+    border: 2px solid rgb(121, 46, 168);
+    border-radius: 10px;
+    background-color: #f1faee;
+    transition: background-color 0.3s, transform 0.5s;
+}
+
+#botao{
+    font-size: 1rem;
+}
+
+button.flip {
+    background-color: lightgreen;
+}
+
+button:hover {
+    background-color: rgb(121, 46, 168);
+}
