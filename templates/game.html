@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Encontre os Pares!</h1>
+        <form method="POST" id="game-form">
+            <div class="cartas-grid">
+                {% for carta in cartas %}
+                    <button type="submit" name="indice" value="{{ loop.index0 }}" 
+                            class="{% if carta.virada %}flip{% endif %}">
+                        {% if carta.virada %}
+                            {{ carta.simbolo }}
+                        {% else %}
+                            ?
+                        {% endif %}
+                    </button>
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+
+    {% if vira_depois %}
+    <script>
+        setTimeout(() => {
+            window.location.href = "{{ url_for('desvirar') }}";  
+        }, 1000);  
+    </script>
+    {% endif %}
+</body>
+</html>
