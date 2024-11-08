@@ -39,7 +39,7 @@ git clone https://github.com/HenryModesto/FlaskGame
 
 Após a instalação:
 
-1. Clique com o botão direito do mouse na pasta `FlaskGame/FlaskGame`.
+1. Clique com o botão direito do mouse na pasta `FlaskGame-main/FlaskGame-main`.
 2. Selecione "Abrir no Terminal".
    
 
